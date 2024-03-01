@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-auto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSOKO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js"
+        integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+    <div x-data="{ atTop: true }">
+        <div class="" @scroll.window="atTop = (window.pageYOffset > 100) ? false : true">
+            <nav class="fixed w-full z-50 top-0 start-0" :class="{'bg-[#093B6D]' : !atTop}">
+                <div class="min-h-8 bg-[#093B6D] grid md:grid-cols-2 md:px-72" :class="{'hidden' : !atTop}">
+                    <div class="px-2.5">
+                        <a href="tel:255782213944" target="_blank"
+                            class="flex px-1 py-1 text-gray-200 transition ease-in-out delay-150 duration-700 hover:-translate-y-0.5 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
+                            <i class="fa fa-phone text-orange-500"></i>
+                            <p class="">+255 782 213 944</p>
+                        </a>
+                    </div>
+                    <div class="px-2.5">
+                        <a href="mailto:info@msoko.co.tz" target="_blank"
+                            class="flex px-1 py-1 text-gray-200 transition ease-in-out delay-150 duration-700 hover:-translate-y-0.5 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
+                            <i class="fa fa-envelope text-orange-500"></i>
+                            <p class="">info@msoko.co.tz</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-0">
+                    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="./assets/images/logo.png" class="h-16" alt="Flowbite Logo">
+                    </a>
+                    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <button type="button"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
+                            started</button>
+                        <button data-collapse-toggle="navbar-sticky" type="button"
+                            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                            aria-controls="navbar-sticky" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+                        id="navbar-sticky">
+                        <ul
+                            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-inherit dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                            <li>
+                                <a href="#"
+                                    class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-orange-500 md:p-0 md:dark:text-blue-500"
+                                    aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- services -->
+    <div class="relative">
+        <div id="carouselDarkVariant" class="relative" data-te-carousel-init data-te-ride="carousel">
+            <!-- Carousel indicators -->
+            <div class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+                data-te-carousel-indicators>
+                <button data-te-target="#carouselDarkVariant" data-te-slide-to="0" data-te-carousel-active
+                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button data-te-target="#carouselDarkVariant"
+                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    data-te-slide-to="1" aria-label="Slide 1"></button>
+                <button data-te-target="#carouselDarkVariant"
+                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    data-te-slide-to="2" aria-label="Slide 1"></button>
+                <button data-te-target="#carouselDarkVariant"
+                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    data-te-slide-to="3" aria-label="Slide 1"></button>
+                <button data-te-target="#carouselDarkVariant"
+                    class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    data-te-slide-to="4" aria-label="Slide 1"></button>
+            </div>
+
+            <!-- Carousel items -->
+            <div
+                class="relative h-[60vh] md:h-[80vh] w-full overflow-hidden after:clear-both after:block after:content-['']">
+                <!-- First item -->
+                <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none h-full"
+                    data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
+                    <div
+                        class="bg-[url('https://www.build-review.com/wp-content/uploads/2019/12/A-guide-to-construction-safety-for-homebuilders.jpg')] bg-cover bg-center h-full relative block w-full h-full bg-gray-600 bg-blend-multiply">
+                        <div
+                            class="bg-transparent dark:bg-gray-800 rounded-lg p-8 md:p-12 mb-8 absolute top-1/4 left-0 right-0 flex justify-center">
+                            <div class="">
+                                <h1 class="text-gray-100 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">How
+                                    to
+                                    quickly deploy a static website</h1>
+                                <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Static websites are
+                                    now
+                                    used to bootstrap lots of websites and are becoming the basis for a variety of tools
+                                    that even influence both web designers and developers.</p>
+                                <a href="#"
+                                    class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                                    Read more
+                                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- second item -->
+                <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none h-full"
+                    data-te-carousel-fade data-te-carousel-item>
+                    <div
+                        class="bg-[url('https://www.stevensec.com/hubfs/construction-company/what-is-industrial-construction/industrial-construction-company.jpg')] bg-cover bg-center h-full absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-gray-600 bg-blend-multiply">
+                        <div
+                            class="bg-transparent dark:bg-gray-800 rounded-lg p-8 md:p-12 mb-8 absolute top-1/4 left-0 right-0 flex justify-center">
+                            <div class="">
+                                <h1 class="text-gray-100 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">How
+                                    to
+                                    quickly deploy a static website</h1>
+                                <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Static websites are
+                                    now
+                                    used to bootstrap lots of websites and are becoming the basis for a variety of tools
+                                    that even influence both web designers and developers.</p>
+                                <a href="#"
+                                    class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                                    Read more
+                                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- third item -->
+                <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none h-full"
+                    data-te-carousel-fade data-te-carousel-item>
+
+                    <div
+                        class="bg-[url('https://www.bosch-pt.com.ph/ph/media/professional/specials/highlights/heavy_duty/construction/kv_construction_1920x768.jpg')] bg-cover bg-center h-full absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-gray-600 bg-blend-multiply">
+                        <div
+                            class="bg-transparent dark:bg-gray-800 rounded-lg p-8 md:p-12 mb-8 absolute top-1/4 left-0 right-0 flex justify-center">
+                            <div class="">
+                                <h1 class="text-gray-100 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">How
+                                    to
+                                    quickly deploy a static website</h1>
+                                <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Static websites are
+                                    now
+                                    used to bootstrap lots of websites and are becoming the basis for a variety of tools
+                                    that even influence both web designers and developers.</p>
+                                <a href="#"
+                                    class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                                    Read more
+                                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fourth item -->
+                <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none h-full"
+                    data-te-carousel-fade data-te-carousel-item>
+                    <div
+                        class="bg-[url('https://images.unsplash.com/photo-1580719993950-0d35ce87c26f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center h-full absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-gray-600 bg-blend-multiply">
+                        <div
+                            class="bg-transparent dark:bg-gray-800 rounded-lg p-8 md:p-12 mb-8 absolute top-1/4 left-0 right-0 flex justify-center">
+                            <div class="">
+                                <h1 class="text-gray-100 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">How
+                                    to
+                                    quickly deploy a static website</h1>
+                                <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Static websites are
+                                    now
+                                    used to bootstrap lots of websites and are becoming the basis for a variety of tools
+                                    that even influence both web designers and developers.</p>
+                                <a href="#"
+                                    class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                                    Read more
+                                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fifth item -->
+                <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none h-full"
+                    data-te-carousel-fade data-te-carousel-item>
+                    <div
+                        class="bg-[url('https://www.cnet.com/a/img/resize/4202ef00e0461101ee6b4fc88ac2eb2fc0df6dfe/hub/2022/04/25/bcfa52df-fe34-4d2b-80d7-443ba660c100/img-9531.jpg?auto=webp&fit=crop&height=675&width=1200')] bg-cover bg-center h-full absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-gray-600 bg-blend-multiply">
+                        <div
+                            class="bg-transparent dark:bg-gray-800 rounded-lg p-8 md:p-12 mb-8 absolute top-1/4 left-0 right-0 flex justify-center">
+                            <div class="">
+                                <h1 class="text-gray-100 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">How
+                                    to
+                                    quickly deploy a static website</h1>
+                                <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6">Static websites are
+                                    now
+                                    used to bootstrap lots of websites and are becoming the basis for a variety of tools
+                                    that even influence both web designers and developers.</p>
+                                <a href="#"
+                                    class="inline-flex justify-center items-center py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                                    Read more
+                                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel controls - prev item-->
+            <button type="button"
+                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-te-target="#carouselDarkVariant" data-te-slide="prev">
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button"
+                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-te-target="#carouselDarkVariant" data-te-slide="next">
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+        <div
+            class="md:absolute -bottom-20 left-0 right-0 grid grid-cols-1 md:grid-cols-3 gap-4 px-1.5 py-2 md:px-72 z-40">
+            <div
+                class="h-60 bg-[#093B6D]/95 rounded-lg md:rounded-l-[40px] cursor-pointer duration-700 ease-in-out hover:-translate-y-1.5">
+                <div class="text-gray-200 font-normal px-3 py-2.5 text-lg uppercase">Construction Materials</div>
+                <div class="h-1 w-20 bg-orange-500"></div>
+            </div>
+            <div class="h-60 bg-[#093B6D]/95 rounded-lg cursor-pointer duration-700 ease-in-out hover:-translate-y-1.5">
+                <div class="text-gray-200 font-normal px-3 py-2.5 text-lg uppercase">ICT Services</div>
+                <div class="h-1 w-20 bg-orange-500"></div>
+            </div>
+            <div
+                class="h-60 bg-[#093B6D]/95 rounded-lg md:rounded-r-[40px] cursor-pointer duration-700 ease-in-out hover:-translate-y-1.5">
+                <div class="text-gray-200 font-normal px-3 py-2.5 text-lg uppercase">Maintenance Services</div>
+                <div class="h-1 w-20 bg-orange-500"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end services -->
+
+    <!-- about -->
+    <div
+        class="bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/A_large_blank_world_map_with_oceans_marked_in_blue.PNG/1024px-A_large_blank_world_map_with_oceans_marked_in_blue.PNG')] bg-center">
+        <div class="bg-gray-50/80 backdrop-brightness-50">
+            <div class="px-4 md:px-72 pt-24 pb-10">
+                <section class="bg-gray-100/70 dark:bg-gray-900 rounded-lg">
+                    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-8">
+                        <div class="text-3xl py-1">Msoko Company Ltd</div>
+                        <div class="w-20 h-1 bg-orange-500 text-transparent">_</div>
+                        <div class="py-2 px-2.5">
+                            M-SOKO Company Ltd is a well-established supplier specializing in the distribution and sale
+                            of
+                            ICT
+                            (Information and Communication Technology) and construction materials. With over 5 years of
+                            experience in the industry, we have been a reliable partner to businesses and construction
+                            projects,
+                            providing high-quality products and exceptional service.
+                            <span><a href="#" class="text-blue-600 hover:text-blue-700 hover:underline">Read
+                                    More</a></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+    <!-- end about -->
+
+    <!-- stats -->
+    <div
+        class="bg-[url('https://www.letsbuild.com/wp-content/uploads/2023/07/Depositphotos_89120612_s-2019.jpg')] bg-cover bg-center bg-gray-700 min-h-96 bg-blend-multiply">
+        <div
+            class="w-full grid grid-cols-2 md:grid-cols-4 gap-0 md:gap-4 justify-center items-center min-h-96 bg-[#093B6D]/70 hover:bg-[#093B6D]/60 backdrop-brightness-50 cursor-pointer px-2.5 md:px-72">
+            <div class="px-2 md:p-4">
+                <div class="text-gray-100 md:text-2xl uppercase">Clients</div>
+                <div class="bg-orange-500 h-1 w-16"></div>
+                <div class="py-2.5 text-3xl md:text-7xl text-gray-100">200+</div>
+            </div>
+            <div class="px-2 md:p-4">
+                <div class="text-gray-100 md:text-2xl uppercase">Projects Completed</div>
+                <div class="bg-orange-500 h-1 w-16"></div>
+                <div class="py-2.5 text-3xl md:text-7xl text-gray-100">100</div>
+            </div>
+            <div class="px-2 md:p-4">
+                <div class="text-gray-100 md:text-2xl uppercase">Products</div>
+                <div class="bg-orange-500 h-1 w-16"></div>
+                <div class="py-2.5 text-3xl md:text-7xl text-gray-100">500+</div>
+            </div>
+            <div class="px-2 md:p-4">
+                <div class="text-gray-100 md:text-2xl uppercase">Support</div>
+                <div class="bg-orange-500 h-1 w-16"></div>
+                <div class="py-2.5 text-3xl md:text-7xl text-gray-100">24 Hrs</div>
+            </div>
+        </div>
+    </div>
+    <!-- end stats -->
+
+    <!-- products -->
+    <div class="py-10 px-2 md:px-72 bg-gray-100">
+        <div class="text-3xl py-1">Our Products</div>
+        <div class="w-20 h-1 bg-orange-500 text-transparent">_</div>
+        <div class="py-5">
+            <div class="mb-4 dark:border-gray-700">
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab"
+                    data-tabs-toggle="#default-tab-content" role="tablist">
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="construction-tab"
+                            data-tabs-target="#construction" type="button" role="tab" aria-controls="construction"
+                            aria-selected="false">Construction</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button
+                            class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                            id="ict-tab" data-tabs-target="#ict" type="button" role="tab" aria-controls="ict"
+                            aria-selected="false">ICT</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="default-tab-content">
+                <div class="hidden p-4 rounded-lg" id="construction" role="tabpanel" aria-labelledby="construction-tab">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-2">
+                        <a href="#"
+                            class="max-w-sm flex rounded-lg hover:-translate-y-1.5 duration-700 ease-in-out dark:bg-gray-800 dark:border-gray-700">
+                            <div
+                                class="min-h-[200px] w-full rounded-xl bg-[url('https://ecommercegermany.com/wp-content/uploads/2022/12/image-from-rawpixel-id-6031660-jpeg-1170x780.jpg')] bg-cover bg-center">
+
+                            </div>
+                            <div class="px-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise...
+                                </p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-0.5 text-sm font-medium text-center text-white bg-orange-600 rounded-lg hover:bg-orange-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Read more
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="max-w-sm bg-gray-50 flex rounded-lg hover:-translate-y-1.5 duration-700 ease-in-out dark:bg-gray-800 dark:border-gray-700">
+                            <div
+                                class="min-h-[200px] w-full rounded-xl bg-[url('https://100pillars.in/wp-content/uploads/2023/04/Building-materials-industry-%E2%80%93-Retrospect-2020-min.jpg')] bg-cover bg-center">
+
+                            </div>
+                            <div class="px-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise...
+                                </p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-0.5 text-sm font-medium text-center text-white bg-orange-600 rounded-lg hover:bg-orange-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Read more
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="max-w-sm bg-gray-50 flex rounded-lg hover:-translate-y-1.5 duration-700 ease-in-out dark:bg-gray-800 dark:border-gray-700">
+                            <div
+                                class="min-h-[200px] w-full rounded-xl bg-[url('https://proest.com/wp-content/uploads/2021/12/common-construction-materials-1024x493.jpg')] bg-cover bg-center">
+
+                            </div>
+                            <div class="px-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise...
+                                </p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-0.5 text-sm font-medium text-center text-white bg-orange-600 rounded-lg hover:bg-orange-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Read more
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="max-w-sm bg-gray-50 flex rounded-lg hover:-translate-y-1.5 duration-700 ease-in-out dark:bg-gray-800 dark:border-gray-700">
+                            <div
+                                class="min-h-[200px] w-full rounded-xl bg-[url('https://dailynews.co.tz/wp-content/uploads/2022/08/building-materials.jpg')] bg-cover bg-center">
+
+                            </div>
+                            <div class="px-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise...
+                                </p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-0.5 text-sm font-medium text-center text-white bg-orange-600 rounded-lg hover:bg-orange-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Read more
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="flex justify-center md:justify-end py-5">
+                        <button class="text-white bg-orange-600 hover:bg-orange-500 px-3 py-1.5 rounded-lg">Load
+                            More</button>
+                    </div>
+                </div>
+                <div class="hidden p-4 rounded-lg" id="ict" role="tabpanel" aria-labelledby="ict-tab">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-2">
+                        <a href="#"
+                            class="max-w-sm flex rounded-lg hover:-translate-y-1.5 duration-700 ease-in-out dark:bg-gray-800 dark:border-gray-700">
+                            <div
+                                class="min-h-[200px] w-full rounded-xl bg-[url('https://cdn.ttgtmedia.com/rms/onlineimages/hp_elitebook_mobile.jpg')] bg-cover bg-center">
+
+                            </div>
+                            <div class="px-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise...
+                                </p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-0.5 text-sm font-medium text-center text-white bg-orange-600 rounded-lg hover:bg-orange-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Read more
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="max-w-sm bg-gray-50 flex rounded-lg hover:-translate-y-1.5 duration-700 ease-in-out dark:bg-gray-800 dark:border-gray-700">
+                            <div
+                                class="min-h-[200px] w-full rounded-xl bg-[url('https://asia.canon/media/image/2020/08/26/e0974bdc54d445039d4e3db2301b0c73_E34xx_AS_FR_cl2_blk_en-362x320.png')] bg-cover bg-center">
+
+                            </div>
+                            <div class="px-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise...
+                                </p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-0.5 text-sm font-medium text-center text-white bg-orange-600 rounded-lg hover:bg-orange-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Read more
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="max-w-sm bg-gray-50 flex rounded-lg hover:-translate-y-1.5 duration-700 ease-in-out dark:bg-gray-800 dark:border-gray-700">
+                            <div
+                                class="min-h-[200px] w-full rounded-xl bg-[url('https://webobjects2.cdw.com/is/image/CDW/7086579?$product-main$')] bg-cover bg-center">
+
+                            </div>
+                            <div class="px-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise...
+                                </p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-0.5 text-sm font-medium text-center text-white bg-orange-600 rounded-lg hover:bg-orange-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Read more
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="max-w-sm bg-gray-50 flex rounded-lg hover:-translate-y-1.5 duration-700 ease-in-out dark:bg-gray-800 dark:border-gray-700">
+                            <div
+                                class="min-h-[200px] w-full rounded-xl bg-[url('https://cdn.mos.cms.futurecdn.net/UEEkgUpRTeWcwpGaYpPJES.jpg')] bg-cover bg-center">
+
+                            </div>
+                            <div class="px-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Noteworthy technology acquisitions 2021</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise...
+                                </p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-0.5 text-sm font-medium text-center text-white bg-orange-600 rounded-lg hover:bg-orange-500 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Read more
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="flex justify-center md:justify-end py-5">
+                        <button class="text-white bg-orange-600 hover:bg-orange-500 px-3 py-1.5 rounded-lg">Load
+                            More</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end products -->
+
+    <!-- contacts -->
+
+    <div class="py-10 px-2 md:px-72 bg-gray-50">
+        <div class="text-3xl py-1">Contact Us</div>
+        <div class="w-20 h-1 bg-orange-500 text-transparent">_</div>
+        <div class="lg:flex mx-1 space-x-2">
+            <div class="sm:w-full lg:w-1/3 my-4 bg-gray-100/50 dark:bg-gray-800 p-2 min-h-[400px] rounded-md">
+                <div class="text-gray-700 dark:text-gray-100 uppercase text-lg">
+                    Contacts
+                </div>
+                <div class="block space-y-2 pt-12 pb-4 px-2">
+                    <a href="tel:255782213944" target="_blank"
+                        class="flex bg-gray-200 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center text-gray-700 dark:text-gray-100">
+                        <i class="fa fa-phone fa-2x"></i>
+                        <p class="">+255 782 213 944</p>
+                    </a>
+                    <a href="https://wa.me/255782213944" target="_blank"
+                        class="flex bg-gray-200 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
+                        <i class="fab fa-whatsapp fa-2x text-green-600"></i>
+                        <p class=" text-gray-700 dark:text-gray-100">255782213944</p>
+                    </a>
+                    <a href="mailto:info@msoko.co.tz" target="_blank"
+                        class="flex bg-gray-200 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center text-gray-700 dark:text-gray-100">
+                        <i class="fa fa-envelope-open-text fa-2x"></i>
+                        <p>info@msoko.co.tz</p>
+                    </a>
+                    <a href="https://www.google.com/maps/place/New+Ushirika+Tower/@-6.822687,39.280181,15z/data=!4m6!3m5!1s0x185c4b074947332d:0x5c4fe70cf9bfd27e!8m2!3d-6.822453!4d39.2801702!16s%2Fg%2F11bzth1fzw?hl=en&entry=ttu"
+                        target="_blank"
+                        class="flex bg-gray-200 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
+                        <i class="fas fa-map-marker-alt text-blue-500 fa-2x"></i>
+                        <p class=" text-gray-700 dark:text-gray-100">Sinza Mori, Dar es Salaam</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sm:w-full lg:w-2/3 my-4 bg-gray-100/50 dark:bg-gray-800 p-2 min-h-[400px] rounded-md">
+                <div class="min-h-[400px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1492.0693173249142!2d39.22699484965628!3d-6.776556169756145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4f0056009597%3A0xa65c14cfadf21f16!2sBGB!5e0!3m2!1sen!2stz!4v1709296353870!5m2!1sen!2stz"
+                        class="w-full min-h-[400px] rounded-md" style="border:0;" allowfullscreen="true" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            fontFamily: {
+                sans: ["Roboto", "sans-serif"],
+                body: ["Roboto", "sans-serif"],
+                mono: ["ui-monospace", "monospace"],
+            },
+        },
+        corePlugins: {
+            preflight: false,
+        },
+    };
+</script>
+
+</html>
