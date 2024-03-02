@@ -17,9 +17,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js"
         integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <style>
+        .hide-scroll-bar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .hide-scroll-bar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 
-<body>
+<body class="">
 
     <div x-data="{ atTop: true }">
         <div class="" @scroll.window="atTop = (window.pageYOffset > 100) ? false : true">
@@ -45,9 +57,9 @@
                         <img src="./assets/images/logo.png" class="h-16" alt="Flowbite Logo">
                     </a>
                     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <button type="button"
+                        <!-- <button type="button"
                             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
-                            started</button>
+                            started</button> -->
                         <button data-collapse-toggle="navbar-sticky" type="button"
                             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                             aria-controls="navbar-sticky" aria-expanded="false">
@@ -78,7 +90,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                                    class="block py-2 px-3 text-gray-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Products</a>
                             </li>
                         </ul>
                     </div>
@@ -117,7 +129,7 @@
                 <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none h-full"
                     data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
                     <div
-                        class="bg-[url('https://www.build-review.com/wp-content/uploads/2019/12/A-guide-to-construction-safety-for-homebuilders.jpg')] bg-cover bg-center h-full relative block w-full h-full bg-gray-600 bg-blend-multiply">
+                        class="bg-[url('https://100pillars.in/wp-content/uploads/2023/04/Building-materials-industry-%E2%80%93-Retrospect-2020-min.jpg')] bg-cover bg-center h-full relative block w-full h-full bg-gray-600 bg-blend-multiply">
                         <div
                             class="bg-transparent dark:bg-gray-800 rounded-lg p-8 md:p-12 mb-8 absolute top-1/4 left-0 right-0 flex justify-center">
                             <div class="">
@@ -146,7 +158,7 @@
                 <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none h-full"
                     data-te-carousel-fade data-te-carousel-item>
                     <div
-                        class="bg-[url('https://www.stevensec.com/hubfs/construction-company/what-is-industrial-construction/industrial-construction-company.jpg')] bg-cover bg-center h-full absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-gray-600 bg-blend-multiply">
+                        class="bg-[url('https://ecommercegermany.com/wp-content/uploads/2022/12/image-from-rawpixel-id-6031660-jpeg-1170x780.jpg')] bg-cover bg-center h-full absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-gray-600 bg-blend-multiply">
                         <div
                             class="bg-transparent dark:bg-gray-800 rounded-lg p-8 md:p-12 mb-8 absolute top-1/4 left-0 right-0 flex justify-center">
                             <div class="">
@@ -176,7 +188,7 @@
                     data-te-carousel-fade data-te-carousel-item>
 
                     <div
-                        class="bg-[url('https://www.bosch-pt.com.ph/ph/media/professional/specials/highlights/heavy_duty/construction/kv_construction_1920x768.jpg')] bg-cover bg-center h-full absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-gray-600 bg-blend-multiply">
+                        class="bg-[url('https://www.build-review.com/wp-content/uploads/2019/12/A-guide-to-construction-safety-for-homebuilders.jpg')] bg-cover bg-center h-full absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-gray-600 bg-blend-multiply">
                         <div
                             class="bg-transparent dark:bg-gray-800 rounded-lg p-8 md:p-12 mb-8 absolute top-1/4 left-0 right-0 flex justify-center">
                             <div class="">
@@ -311,8 +323,8 @@
 
     <!-- about -->
     <div
-        class="bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/A_large_blank_world_map_with_oceans_marked_in_blue.PNG/1024px-A_large_blank_world_map_with_oceans_marked_in_blue.PNG')] bg-center">
-        <div class="bg-gray-50/80 backdrop-brightness-50">
+        class="bg-[url('https://img.freepik.com/free-vector/abstract-lines-big-dots-white-background_23-2148820894.jpg')] bg-center bg-cover">
+        <div class="bg-gr ay-50/80 backdrop-bright ness-50">
             <div class="px-4 md:px-72 pt-24 pb-10">
                 <section class="bg-gray-100/70 dark:bg-gray-900 rounded-lg">
                     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-8">
@@ -367,7 +379,7 @@
     <!-- end stats -->
 
     <!-- products -->
-    <div class="py-10 px-2 md:px-72 bg-gray-100">
+    <div class="py-10 px-2 md:px-72 bg-gray-100 bg-[url('https://t4.ftcdn.net/jpg/05/68/03/57/360_F_568035778_PFPV5XBKWgNz2OUtQ7Hbm04UU848zNk3.jpg')] bg-cover">
         <div class="text-3xl py-1">Our Products</div>
         <div class="w-20 h-1 bg-orange-500 text-transparent">_</div>
         <div class="py-5">
@@ -612,9 +624,32 @@
     </div>
     <!-- end products -->
 
+    <!-- clients -->
+    <div class="bg-white min-h-48 py-8">
+        <div class="px-4 py-4 md:px-72">
+            <div class="text-3xl py-1">Our Clients</div>
+            <div class="w-20 h-1 bg-orange-500 text-transparent">_</div>
+            <div class="w-full flex space-x-4 justify-start overflow-x-auto hide-scroll-bar">
+                <div
+                    class="flex-shrink-0 px-2 grayscale hover:grayscale-0 cursor-pointer rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out min:w-52 min:h-40 items-center">
+                    <img src="./assets/images/clients/cyber.png" class="w-full h-40 object-cover">
+                </div>
+                <div
+                    class="flex-shrink-0 px-2 grayscale hover:grayscale-0 cursor-pointer rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out min:w-52 min:h-40 items-center">
+                    <img src="./assets/images/clients/veta.png" class="w-full h-40 object-cover">
+                </div>
+                <div
+                    class="flex-shrink-0 px-2 grayscale hover:grayscale-0 cursor-pointer rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out min:w-52 min:h-40 items-center">
+                    <img src="./assets/images/clients/pdf.png" class="w-full h-40 object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end clients -->
+
     <!-- contacts -->
 
-    <div class="py-10 px-2 md:px-72 bg-gray-50">
+    <div class="py-10 px-2 md:px-72 bg-gray-50 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqIxv9sN1YKThx-5QT7XLdGwaNccPlqzVKeeIPj8kN4AD8tnI-IuhhFQRr15127uV8bZs&usqp=CAU')] bg-cover">
         <div class="text-3xl py-1">Contact Us</div>
         <div class="w-20 h-1 bg-orange-500 text-transparent">_</div>
         <div class="lg:flex mx-1 space-x-2">
@@ -624,23 +659,23 @@
                 </div>
                 <div class="block space-y-2 pt-12 pb-4 px-2">
                     <a href="tel:255782213944" target="_blank"
-                        class="flex bg-gray-200 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center text-gray-700 dark:text-gray-100">
+                        class="flex bg-gray-200/50 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center text-gray-700 dark:text-gray-100">
                         <i class="fa fa-phone fa-2x"></i>
                         <p class="">+255 782 213 944</p>
                     </a>
                     <a href="https://wa.me/255782213944" target="_blank"
-                        class="flex bg-gray-200 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
+                        class="flex bg-gray-200/50 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
                         <i class="fab fa-whatsapp fa-2x text-green-600"></i>
                         <p class=" text-gray-700 dark:text-gray-100">255782213944</p>
                     </a>
                     <a href="mailto:info@msoko.co.tz" target="_blank"
-                        class="flex bg-gray-200 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center text-gray-700 dark:text-gray-100">
+                        class="flex bg-gray-200/50 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center text-gray-700 dark:text-gray-100">
                         <i class="fa fa-envelope-open-text fa-2x"></i>
                         <p>info@msoko.co.tz</p>
                     </a>
                     <a href="https://www.google.com/maps/place/New+Ushirika+Tower/@-6.822687,39.280181,15z/data=!4m6!3m5!1s0x185c4b074947332d:0x5c4fe70cf9bfd27e!8m2!3d-6.822453!4d39.2801702!16s%2Fg%2F11bzth1fzw?hl=en&entry=ttu"
                         target="_blank"
-                        class="flex bg-gray-200 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
+                        class="flex bg-gray-200/50 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
                         <i class="fas fa-map-marker-alt text-blue-500 fa-2x"></i>
                         <p class=" text-gray-700 dark:text-gray-100">Sinza Mori, Dar es Salaam</p>
                     </a>
@@ -657,6 +692,49 @@
             </div>
         </div>
     </div>
+    <!-- end contacts -->
+
+    <!-- footer -->
+    <footer class="bg-[#093B6D] min-h-[40vh] px-4 md:px-72">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 py-10 space">
+            <div class="">
+                <img src="./assets/images/logo.png" alt="">
+                <div class="flex space-x-1 px-8 py-2.5">
+                    <i
+                        class="fa-brands fa-facebook text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
+                    <i
+                        class="fa-brands fa-instagram text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
+                    <i
+                        class="fa-brands fa-whatsapp text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
+                    <i
+                        class="fa-brands fa-tiktok text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
+                </div>
+            </div>
+            <div class="px-8">
+                <div class="text-xl text-gray-200 font-bold">Quick Links</div>
+                <div class="w-10 h-1 bg-orange-500 text-transparent">_</div>
+                <div class="flex space-x-1 py-2.5">
+                    <ul>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="#" class="px-2.5 text-gray-300 hover:text-orange-500">About Us</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="#" class="px-2.5 text-gray-300 hover:text-orange-500">Company Profile</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="#" class="px-2.5 text-gray-300 hover:text-orange-500">Products</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="#" class="px-2.5 text-gray-300 hover:text-orange-500">Our Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="px-8">
+                <div class="text-xl text-gray-200 font-bold">Reach Us</div>
+                <div class="w-10 h-1 bg-orange-500 text-transparent">_</div>
+                <div class="flex space-x-1 py-2.5">
+                    <ul>
+                        <li><i class="fa-solid fa-phone text-orange-500 py-2"></i><a href="tel:255782213944" target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">+255 782 213 944</a></li>
+                        <li><i class="fa-solid fa-envelope text-orange-500 py-2"></i><a href="mailto:info@msoko.co.tz" target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">info@msoko.co.tz</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
 
 </body>
 <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->
