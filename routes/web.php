@@ -1,5 +1,11 @@
 <?php
 
+use App\Livewire\Pages\Admin\Dashboard\Dashboards;
+use App\Livewire\Pages\Admin\Product\AdminProducts;
+use App\Livewire\Pages\Public\About\Abouts;
+use App\Livewire\Pages\Public\Home\Home;
+use App\Livewire\Pages\Public\Product\AllProducts;
+use App\Livewire\Pages\Public\Service\Services;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +19,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', Home::class)->name('home');
+Route::get('/about-us', Abouts::class)->name('about');
+Route::get('/products', AllProducts::class)->name('products');
+Route::get('/services', Services::class)->name('services');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('dashboard', Dashboards::class)
+        ->name('dashboard');
+
+    Route::get('products', AdminProducts::class)
+            ->name('admin_products');
+});
+    // ->middleware(['auth', 'verified']);
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
