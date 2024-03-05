@@ -8,15 +8,15 @@
                     Contacts
                 </div>
                 <div class="block space-y-2 pt-12 pb-4 px-2">
-                    <a href="tel:255782213944" target="_blank"
+                    <a href="tel:255717101860" target="_blank"
                         class="flex bg-gray-200/50 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center text-gray-700 dark:text-gray-100">
                         <i class="fa fa-phone fa-2x"></i>
                         <p class="">+255 782 213 944</p>
                     </a>
-                    <a href="https://wa.me/255782213944" target="_blank"
+                    <a href="https://wa.me/255717101860" target="_blank"
                         class="flex bg-gray-200/50 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
                         <i class="fab fa-whatsapp fa-2x text-green-600"></i>
-                        <p class=" text-gray-700 dark:text-gray-100">255782213944</p>
+                        <p class=" text-gray-700 dark:text-gray-100">255717101860</p>
                     </a>
                     <a href="mailto:info@m-soko.co.tz" target="_blank"
                         class="flex bg-gray-200/50 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center text-gray-700 dark:text-gray-100">
@@ -27,7 +27,7 @@
                         target="_blank"
                         class="flex bg-gray-200/50 dark:bg-gray-700 px-1 py-4 transition ease-in-out delay-150 duration-700 hover:-translate-y-1 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
                         <i class="fas fa-map-marker-alt text-blue-500 fa-2x"></i>
-                        <p class=" text-gray-700 dark:text-gray-100">Sinza Mori, Dar es Salaam</p>
+                        <p class=" text-gray-700 dark:text-gray-100">Sinza Mori - Dar es Salaam, Opposite Delina Apartments</p>
                     </a>
                 </div>
             </div>

@@ -21,7 +21,7 @@
                             experience in the industry, we have been a reliable partner to businesses and construction
                             projects,
                             providing high-quality products and exceptional service.
-                            <span><a href="#" class="text-blue-600 hover:text-blue-700 hover:underline">Read
+                            <span><a href="{{ route('about') }}" class="text-blue-600 hover:text-blue-700 hover:underline">Read
                                     More</a></span>
                         </div>
                     </div>

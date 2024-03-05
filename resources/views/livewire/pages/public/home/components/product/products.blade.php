@@ -20,9 +20,12 @@
                 </ul>
             </div>
             <div id="default-tab-content">
-                @livewire('pages.public.home.components.product.includes.construction')
-
-                @livewire('pages.public.home.components.product.includes.ict')
+                <div class="hidden p-4 rounded-lg" id="construction" role="tabpanel" aria-labelledby="construction-tab">
+                    @livewire('pages.public.home.components.product.includes.construction')
+                </div>
+                <div class="hidden p-4 rounded-lg" id="ict" role="tabpanel" aria-labelledby="ict-tab">
+                    @livewire('pages.public.home.components.product.includes.ict')
+                </div>
             </div>
         </div>
     </div>

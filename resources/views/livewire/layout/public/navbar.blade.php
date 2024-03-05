@@ -6,12 +6,18 @@
             >
             @if (Route::is('home'))
                 <div class="hidden md:flex w-screen">
-                    <div class="min-h-8 w-full bg-[#133d67] grid md:grid-cols-2 md:px-72" :class="{ 'hidden': !atTop }">
-                        <div class="px-2.5">
-                            <a href="tel:255782213944" target="_blank"
+                    <div class="min-h-8 w-full bg-[#133d67] grid md:grid-cols-3 md:px-72" :class="{ 'hidden': !atTop }">
+                        <div class="px-2.5 flex items-center space-x-1">
+                            <a href="tel:255717101860" target="_blank"
                                 class="flex px-1 py-1 text-gray-200 transition ease-in-out delay-150 duration-700 hover:-translate-y-0.5 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
                                 <i class="fa fa-phone text-orange-500"></i>
-                                <p class="">+255 782 213 944</p>
+                                <p class="">+255 717 101 860</p>
+                            </a> 
+                            <div class="text-gray-100">/</div> 
+                            <a href="tel:255762179139" target="_blank"
+                                class="flex px-1 py-1 text-gray-200 transition ease-in-out delay-150 duration-700 hover:-translate-y-0.5 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
+                                <i class="fa fa-phone text-orange-500"></i>
+                                <p class="">+255 762 179 139</p>
                             </a>
                         </div>
                         <div class="px-2.5">
@@ -19,6 +25,13 @@
                                 class="flex px-1 py-1 text-gray-200 transition ease-in-out delay-150 duration-700 hover:-translate-y-0.5 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
                                 <i class="fa fa-envelope text-orange-500"></i>
                                 <p class="">info@m-soko.co.tz</p>
+                            </a>
+                        </div>
+                        <div class="px-2.5">
+                            <a href="mailto:info@m-soko.co.tz" target="_blank"
+                                class="flex px-1 py-1 text-gray-200 transition ease-in-out delay-150 duration-700 hover:-translate-y-0.5 cursor-pointer rounded-md hover:shadow-md space-x-2 text-lg items-center">
+                                <span class="text-orange-500">TIN:</span>
+                                <p class="">169-406-111</p>
                             </a>
                         </div>
                     </div>

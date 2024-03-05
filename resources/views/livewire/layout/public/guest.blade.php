@@ -70,7 +70,8 @@
                 <div class="w-10 h-1 bg-orange-500 text-transparent">_</div>
                 <div class="flex space-x-1 py-2.5">
                     <ul>
-                        <li><i class="fa-solid fa-phone text-orange-500 py-2"></i><a href="tel:255782213944" target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">+255 782 213 944</a></li>
+                        <li><i class="fa-solid fa-phone text-orange-500 py-2"></i><a href="tel:255717101860" target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">+255 717 101 860</a></li>
+                        <li><i class="fa-solid fa-phone text-orange-500 py-2"></i><a href="tel:762179139" target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">+255 762 179 139</a></li>
                         <li><i class="fa-solid fa-envelope text-orange-500 py-2"></i><a href="mailto:info@m-soko.co.tz" target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">info@m-soko.co.tz</a></li>
                     </ul>
                 </div>
