@@ -6,8 +6,8 @@
         ])
     </x-slot>
     <div>
-        
-        
+
+
         <div class="@if (!$showForm) hidden @endif">
             @livewire('pages.admin.client.client-form')
         </div>
@@ -16,15 +16,15 @@
             <div class="max-w-full mx-auto sm:px-6 lg:px-0">
                 <div class="w-full">
                     <div class="flex justify-end pb-2">
-                        <button  
-                        wire:click="toggleForm"
-                        data-drawer-target="client-form-drawer" data-drawer-show="client-form-drawer" data-drawer-placement="right" aria-controls="client-form-drawer"
+                        <button wire:click="toggleForm" data-drawer-target="client-form-drawer"
+                            data-drawer-show="client-form-drawer" data-drawer-placement="right"
+                            aria-controls="client-form-drawer"
                             class="items-center space-x-0.5 text-gray-600 hover:text-gray-500 bg-gray-50 hover:bg-white shadow-sm hover:shadow-md px-2 border-2 border-gray-200 py-1 rounded-lg">
                             <i class="fa-solid fa-plus-circle"></i>
                             <span class="">{{ __('Add Client') }}</span>
                         </button>
 
-                        
+
                     </div>
                     <div class="flex flex-col-reverse md:flex-row md:space-x-3">
                         <div
@@ -70,15 +70,19 @@
                                                         class="px-4 py-3 w-[50px] font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                         {{ $loop->iteration }}</th>
                                                     <td class="px-4 py-3 whitespace-nowrap">
-                                                        <img src="{{ $dt->image }}" class="w-32"></td>
-                                                        <td class="px-4 py-3 whitespace-nowrap">
-                                                            {{ $dt->created_at->format('M d, Y') }}</td>
+                                                        <img src="{{ $dt->image }}" class="w-32">
+                                                    </td>
+                                                    <td class="px-4 py-3 whitespace-nowrap">
+                                                        {{ $dt->created_at->format('M d, Y') }}</td>
                                                     <td class="px-4 py-3 whitespace-nowrap">
                                                         {{ $dt->user?->name }}</td>
                                                     <td class="px-4 py-3 flex items-center justify-end space-x-1">
-                                                        <button title="Update" 
-                                                        wire:click="$dispatch('update_client', {'id': {{ $dt->id }}})"
-                                                        data-drawer-target="client-form-drawer" data-drawer-show="client-form-drawer" data-drawer-placement="right" aria-controls="client-form-drawer"
+                                                        <button title="Update"
+                                                            wire:click="$dispatch('update_client', {'id': {{ $dt->id }}})"
+                                                            data-drawer-target="client-form-drawer"
+                                                            data-drawer-show="client-form-drawer"
+                                                            data-drawer-placement="right"
+                                                            aria-controls="client-form-drawer"
                                                             class="px-1 bg-gray-300 hover:bg-blue-700 text-white rounded">
                                                             <i class="fa fa-edit"></i></button>
 
