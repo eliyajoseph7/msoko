@@ -1,7 +1,7 @@
 <div>
     <x-slot name="header">
         @include('includes.breadcrumb', [
-            'main' => 'Settings',
+            'main' => '',
             'menu' => 'Products',
         ])
     </x-slot>
@@ -9,7 +9,6 @@
         
         
         <div class="@if (!$showForm) hidden @endif">
-
             @livewire('pages.admin.product.product-form')
         </div>
 

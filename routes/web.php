@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Pages\Admin\Client\AdminClients;
 use App\Livewire\Pages\Admin\Dashboard\Dashboards;
 use App\Livewire\Pages\Admin\Product\AdminProducts;
 use App\Livewire\Pages\Public\About\Abouts;
@@ -30,6 +31,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::get('products', AdminProducts::class)
             ->name('admin_products');
+
+            Route::get('clients', AdminClients::class)
+                    ->name('clients');
 });
     // ->middleware(['auth', 'verified']);
 

@@ -5,6 +5,8 @@ namespace App\Livewire\Pages\Admin\Product;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\ProductImage;
+use Illuminate\Support\Facades\Storage;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
@@ -116,8 +118,8 @@ class ProductForm extends Component
                     $fileNameToSave = '/storage/productImages/' . $fileName;
                 } catch (\Throwable $e) {
                 }
+                $gallery->image = $fileNameToSave;
             }
-            $gallery->image = $fileNameToSave;
             $gallery->product_id = $this->id;
             $gallery->save();
         }
@@ -138,6 +140,23 @@ class ProductForm extends Component
     {
         $this->dispatch('reset_category');
         $this->reset();
+    }
+
+
+    #[On('delete_product_image')]
+    public function deleteProductImage($key)
+    {
+        $image = $this->images[$key];
+
+        $imgname = str_replace(substr($image, 0, 9), '', $image);
+        $check = Storage::disk('public')->exists($imgname);
+        if ($check) {
+            Storage::disk('public')->delete($imgname);
+        }
+
+        ProductImage::where('image', $image)->first()?->delete();
+        $this->editProduct($this->id);
+        $this->dispatch('product_image_deleted');
     }
 
     public function render()

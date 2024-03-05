@@ -3,6 +3,8 @@
 namespace App\Livewire\Pages\Admin\Product;
 
 use App\Models\Product;
+use App\Models\ProductImage;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -24,7 +26,8 @@ class AdminProducts extends Component
     ];
 
 
-    public function toggleForm() {
+    public function toggleForm()
+    {
         $this->showForm = !$this->showForm;
     }
 
@@ -44,6 +47,19 @@ class AdminProducts extends Component
     public function deleteProduct($id)
     {
 
+        $images = ProductImage::where('product_id', $id)->get();
+        foreach ($images as $key => $image) {
+
+            $image = $image->image;
+
+            $imgname = str_replace(substr($image, 0, 9), '', $image);
+            $check = Storage::disk('public')->exists($imgname);
+            if ($check) {
+                Storage::disk('public')->delete($imgname);
+            }
+
+            $image->delete();
+        }
         Product::find($id)->delete();
 
         $this->dispatch('product_deleted');
