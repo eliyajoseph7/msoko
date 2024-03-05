@@ -10,7 +10,7 @@
                         <img src="{{ $client->image }}" class="w-full h-40 object-cover">
                     </div>
                 @empty
-                    <div class="">To be updated soon!</div>
+                    <div class="py-2">To be updated soon!</div>
                 @endforelse
             </div>
         </div>
