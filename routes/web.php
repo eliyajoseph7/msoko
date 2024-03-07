@@ -30,15 +30,18 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         ->name('dashboard');
 
     Route::get('products', AdminProducts::class)
-            ->name('admin_products');
+        ->name('admin_products');
 
-            Route::get('clients', AdminClients::class)
-                    ->name('clients');
+    Route::get('clients', AdminClients::class)
+        ->name('clients');
 });
-    // ->middleware(['auth', 'verified']);
+// ->middleware(['auth', 'verified']);
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
+Route::get('register', function () {
+    return redirect()->route('login');
+});
 require __DIR__ . '/auth.php';

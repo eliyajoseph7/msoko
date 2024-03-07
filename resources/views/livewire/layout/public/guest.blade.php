@@ -58,10 +58,11 @@
                 <div class="w-10 h-1 bg-orange-500 text-transparent">_</div>
                 <div class="flex space-x-1 py-2.5">
                     <ul>
-                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="#" class="px-2.5 text-gray-300 hover:text-orange-500">About Us</a></li>
-                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="#" class="px-2.5 text-gray-300 hover:text-orange-500">Company Profile</a></li>
-                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="#" class="px-2.5 text-gray-300 hover:text-orange-500">Products</a></li>
-                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="#" class="px-2.5 text-gray-300 hover:text-orange-500">Our Contacts</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ route('about') }}" class="px-2.5 text-gray-300 hover:text-orange-500">About Us</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ asset('assets/pdf/m-soko_profile.pdf') }}" target="_blank"
+                            rel="noopener noreferrer" class="px-2.5 text-gray-300 hover:text-orange-500">Company Profile</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ route('products') }}" class="px-2.5 text-gray-300 hover:text-orange-500">Products</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ route('services') }}" class="px-2.5 text-gray-300 hover:text-orange-500">Our Services</a></li>
                     </ul>
                 </div>
             </div>
