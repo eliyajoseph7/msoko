@@ -10,7 +10,7 @@
             high-quality products and exceptional service
         </div>
         <div class="py-8 pb-4">
-            <div class="font-bold text-orange-400 hover:text-orange-500">Our Vission</div>
+            <div class="font-bold text-orange-400 hover:text-orange-500 uppercase">Our Vission</div>
             <div class="py-2">
                 To continuously innovate and expand our offerings, becoming a leading supplier in the ICT and
                 construction industries, while maintaining the highest standards of quality and service.
@@ -18,7 +18,7 @@
         </div>
 
         <div class="py-4">
-            <div class="font-bold text-orange-400 hover:text-orange-500">Our Mission</div>
+            <div class="font-bold text-orange-400 hover:text-orange-500 uppercase">Our Mission</div>
             <div class="py-2">
                 <ol>
                     <li class="flex space-x-1 items-center">
