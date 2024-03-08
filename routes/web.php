@@ -3,6 +3,7 @@
 use App\Livewire\Pages\Admin\Client\AdminClients;
 use App\Livewire\Pages\Admin\Dashboard\Dashboards;
 use App\Livewire\Pages\Admin\Product\AdminProducts;
+use App\Livewire\Pages\Admin\User\Users;
 use App\Livewire\Pages\Public\About\Abouts;
 use App\Livewire\Pages\Public\Home\Home;
 use App\Livewire\Pages\Public\Product\AllProducts;
@@ -34,6 +35,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::get('clients', AdminClients::class)
         ->name('clients');
+    Route::get('users', Users::class)
+        ->name('users');
 });
 // ->middleware(['auth', 'verified']);
 

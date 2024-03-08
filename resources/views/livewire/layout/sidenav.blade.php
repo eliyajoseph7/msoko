@@ -1,5 +1,5 @@
 <aside id="logo-sidebar"
-    class="fixed top-[6.5rem] left-0 z-30 md:z-40 w-64 h-screen transition-transform -translate-x-full bg-white border-r-8 border-r-gray-100/50 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+    class="fixed top-[6.5rem] left-0 z-30 md:z-40 w-64 h-screen transition-transform -translate-x-full bg-gray-50 border-r-8 border-r-gray-100/50 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
     aria-label="Sidebar">
     <div class="flex items-center justify-start rtl:justify-end py-4">
         <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
@@ -54,76 +54,17 @@
                     <span class="flex-1 ms-3 whitespace-nowrap text-md">Clients</span>
                 </a>
             </li>
-            {{-- <li>
-                <a href="{{ route('returns') }}"
-                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white {{ Route::is('returns') ? 'bg-orange-500 text-white hover:bg-orange-400' : 'hover:bg-gray-100' }} dark:hover:bg-gray-700 group">
+            <li>
+                <a href="{{ route('users') }}"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white {{ Route::is('users') ? 'bg-orange-500 text-white hover:bg-orange-400' : 'hover:bg-gray-100' }} dark:hover:bg-gray-700 group">
                     <svg class="flex-shrink-0 w-4 h-4 text-inherit transition duration-75 dark:text-gray-400 group-hover:text-inherit dark:group-hover:text-white"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
                         <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                            d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
                     </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap text-md">Returns</span>
-                </a>
-            </li> --}}
-            {{-- <li>
-                <a href="{{ route('expenditures') }}"
-                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white {{ Route::is('expenditures') ? 'bg-orange-500 text-white hover:bg-orange-400' : 'hover:bg-gray-100' }} dark:hover:bg-gray-700 group">
-                    <svg class="flex-shrink-0 w-4 h-4 text-inherit transition duration-75 dark:text-gray-400 group-hover:text-inherit dark:group-hover:text-white"
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12M12.265 3.11a.375.375 0 1 1-.53 0L12 2.845l.265.265Zm-3 0a.375.375 0 1 1-.53 0L9 2.845l.265.265Zm6 0a.375.375 0 1 1-.53 0L15 2.845l.265.265Z" />
-                    </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap text-md">Expenditures</span>
+                    <span class="flex-1 ms-3 whitespace-nowrap text-md">Users</span>
                 </a>
             </li>
-            <li>
-                <a href="{{ route('supports') }}"
-                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white {{ Route::is('supports') ? 'bg-orange-500 text-white hover:bg-orange-400' : 'hover:bg-gray-100' }} dark:hover:bg-gray-700 group">
-                    <svg class="flex-shrink-0 w-4 h-4 text-inherit transition duration-75 dark:text-gray-400 group-hover:text-inherit dark:group-hover:text-white"
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
-                    </svg>
-
-                    <span class="flex-1 ms-3 whitespace-nowrap text-md">Support</span>
-                </a>
-            </li> --}}
         </ul>
-        {{-- <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
-            <p class="text-sm text-gray-400">SETTINGS</p>
-            <li>
-                <a href="{{ route('payment_methods') }}"
-                    class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 {{ (Route::is('payment_methods') || Route::is('role_clients')) ? 'bg-orange-500 text-white hover:bg-orange-400' : 'hover:bg-gray-100' }} dark:hover:bg-gray-700 dark:text-white group">
-                    <svg class="flex-shrink-0 w-4 h-4 text-inherit transition duration-75 dark:text-gray-400 group-hover:text-inherit dark:group-hover:text-white"
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 17 20">
-                        <path
-                            d="M7.958 19.393a7.7 7.7 0 0 1-6.715-3.439c-2.868-4.832 0-9.376.944-10.654l.091-.122a3.286 3.286 0 0 0 .765-3.288A1 1 0 0 1 4.6.8c.133.1.313.212.525.347A10.451 10.451 0 0 1 10.6 9.3c.5-1.06.772-2.213.8-3.385a1 1 0 0 1 1.592-.758c1.636 1.205 4.638 6.081 2.019 10.441a8.177 8.177 0 0 1-7.053 3.795Z" />
-                    </svg>
-                    <span class="ms-3">Payment Methods</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('clients') }}"
-                    class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 {{ Route::is('clients') ? 'bg-orange-500 text-white hover:bg-orange-400' : 'hover:bg-gray-100' }} dark:hover:bg-gray-700 dark:text-white group">
-                    <svg class="flex-shrink-0 w-4 h-4 text-inherit transition duration-75 dark:text-gray-400 group-hover:text-inherit dark:group-hover:text-white"
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                        <path
-                            d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z" />
-                    </svg>
-                    <span class="ms-3">Clients</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{ route('staffs') }}"
-                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white {{ Route::is('staffs') ? 'bg-orange-500 text-white hover:bg-orange-400' : 'hover:bg-gray-100' }} dark:hover:bg-gray-700 group">
-                    <svg class="flex-shrink-0 w-4 h-4 text-inherit transition duration-75 dark:text-gray-400 group-hover:text-inherit dark:group-hover:text-white"
-                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                        <path
-                            d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
-                    </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap text-md">Staffs</span>
-                </a>
-            </li>
-        </ul> --}}
     </div>
 </aside>
