@@ -17,7 +17,7 @@
                     <x-application-logo class="me-3" alt="FlowBite Logo" />
                 </a> --}}
     </div>
-    <div class="h-full px-3 pb-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+    <div class="h-full px-3 pb-4 overflow-y-auto bg-gray-inherit dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
             <li>
                 <a href="{{ route('dashboard') }}"
