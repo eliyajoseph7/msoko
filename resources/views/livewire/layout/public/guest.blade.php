@@ -55,7 +55,7 @@
             </div>
             <div class="px-8">
                 <div class="text-xl text-gray-200 font-bold">Quick Links</div>
-                <div class="w-10 h-1 bg-orange-500 text-transparent">_</div>
+                <div class="w-28 h-1 bg-orange-500 text-transparent">_</div>
                 <div class="flex space-x-1 py-2.5">
                     <ul>
                         <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ route('about') }}" class="px-2.5 text-gray-300 hover:text-orange-500">About Us</a></li>
@@ -68,7 +68,7 @@
             </div>
             <div class="px-8">
                 <div class="text-xl text-gray-200 font-bold">Reach Us</div>
-                <div class="w-10 h-1 bg-orange-500 text-transparent">_</div>
+                <div class="w-[5.5rem] h-1 bg-orange-500 text-transparent">_</div>
                 <div class="flex space-x-1 py-2.5">
                     <ul>
                         <li><i class="fa-solid fa-phone text-orange-500 py-2"></i><a href="tel:255717101860" target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">+255 717 101 860</a></li>
