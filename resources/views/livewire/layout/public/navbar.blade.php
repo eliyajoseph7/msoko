@@ -61,7 +61,7 @@
                         class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-500 rounded-lg bg-[#093B6D] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-inherit dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
                             <a href="{{ route('home') }}"
-                                class="block py-2 px-3 bg-inherit rounded hover:bg-blue-800 md:bg-transparent {{ Route::is('home') ? 'text-orange-500' : 'text-gray-300' }} md:p-0 md:dark:text-blue-500"
+                                class="block py-2 px-3 bg-inherit rounded hover:bg-blue-800 md:hover:bg-transparent md:hover:text-orange-500 md:bg-transparent {{ Route::is('home') ? 'text-orange-500' : 'text-gray-300' }} md:p-0 md:dark:text-blue-500"
                                 aria-current="page">Home</a>
                         </li>
                         <li>
