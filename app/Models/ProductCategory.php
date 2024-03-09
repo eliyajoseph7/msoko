@@ -12,4 +12,13 @@ class ProductCategory extends Model
     public function products() {
         return $this->hasMany(Product::class);
     }
+
+    public function scopeSearch($qs, $keyword)
+    {
+        $qs->WhereHas('products', function ($query) use ($keyword) {
+                $query->where('name', 'like', '%' . $keyword . '%')
+                ->orWhere('short_description', 'like', '%' . $keyword . '%')
+                ->orWhere('price', 'like', '%' . $keyword . '%');
+            });
+    }
 }

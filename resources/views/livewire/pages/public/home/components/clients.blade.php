@@ -1,6 +1,6 @@
 <div>
     <div class="bg-white min-h-48 py-8">
-        <div class="px-4 py-4 md:px-72">
+        <div class="px-4 py-4 md:px-20 lg:px-72">
             <div class="text-3xl py-1">Our Clients</div>
             <div class="w-20 h-1 bg-orange-500 text-transparent">_</div>
             <div class="w-full flex space-x-4 justify-start overflow-x-auto hide-scroll-bar">

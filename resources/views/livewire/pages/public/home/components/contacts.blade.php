@@ -1,5 +1,5 @@
 <div>
-    <div class="py-10 px-2 md:px-72 bg-gray-50">
+    <div class="py-10 px-2 md:px-20 lg:px-72 bg-gray-50">
         <div class="text-3xl py-1">Contact Us</div>
         <div class="w-20 h-1 bg-orange-500 text-transparent">_</div>
         <div class="lg:flex mx-1 space-x-2">

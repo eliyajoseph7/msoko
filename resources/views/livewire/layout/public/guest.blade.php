@@ -38,10 +38,10 @@
     {{ $slot }}
 </div>
     <!-- footer -->
-    <footer class="bg-[#093B6D] min-h-[40vh] px-4 md:px-72">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 py-10 space">
+    <footer class="bg-[#093B6D] min-h-[40vh] px-4 md:px-20 lg:px-72">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-10 space">
             <div class="">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="">
+                <img src="{{ asset('assets/images/logo.png') }}" class="max-h-[100px]">
                 <div class="flex space-x-1 px-8 py-2.5">
                     <i
                         class="fa-brands fa-facebook text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>

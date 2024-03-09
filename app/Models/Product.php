@@ -27,6 +27,8 @@ class Product extends Model
     public function scopeSearch($qs, $keyword)
     {
         $qs->where('name', 'like', '%' . $keyword . '%')
+            ->orWhere('price', 'like', '%' . $keyword . '%')
+            ->orWhere('short_description', 'like', '%' . $keyword . '%')
             ->orWhereHas('category', function ($query) use ($keyword) {
                 $query->where('name', 'like', '%' . $keyword . '%');
             });

@@ -2,7 +2,7 @@
     @include('livewire.layout.public.banner', [
         'page' => 'About Us',
     ])
-    <div class="px-4 md:px-72 py-10 bg-gray-300 bg-[url('{{ asset('assets/images/bgs/bg-2.jpg') }}')] bg-cover bg-blend-overlay">
+    <div class="px-4 md:px-20 lg:px-72 py-10 bg-gray-300 bg-[url('{{ asset('assets/images/bgs/bg-2.jpg') }}')] bg-cover bg-blend-overlay">
         <div class="">
             M-SOKO Company Ltd is a well-established supplier specializing in the distribution and sale of ICT
             (Information and Communication Technology) and construction materials. With over 5 years of experience in

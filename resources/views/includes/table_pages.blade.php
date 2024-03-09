@@ -1,5 +1,5 @@
 <div class="py-4 px-3 dark:bg-gray-700">
-    <div class="flex dark:bg-gray-700">
+    <div class="flex dark:bg-gray-700 {{ $hide_page ?? '' ? 'hidden' : '' }}">
         <div class="flex space-x-4 items-center mb-3">
             <label class="w-32 text-sm font-medium text-gray-900 dark:text-gray-100">Per Page</label>
             <select wire:model.live="perPage"

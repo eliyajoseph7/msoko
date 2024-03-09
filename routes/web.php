@@ -7,6 +7,7 @@ use App\Livewire\Pages\Admin\User\Users;
 use App\Livewire\Pages\Public\About\Abouts;
 use App\Livewire\Pages\Public\Home\Home;
 use App\Livewire\Pages\Public\Product\AllProducts;
+use App\Livewire\Pages\Public\Product\ProductDetails;
 use App\Livewire\Pages\Public\Service\Services;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', Home::class)->name('home');
 Route::get('/about-us', Abouts::class)->name('about');
 Route::get('/products', AllProducts::class)->name('products');
+Route::get('/product-details/{id}', ProductDetails::class)->name('product_details');
 Route::get('/services', Services::class)->name('services');
 
 Route::prefix('admin')->middleware('auth')->group(function () {

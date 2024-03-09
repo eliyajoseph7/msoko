@@ -1,5 +1,5 @@
 <div>
-    <div class="py-10 px-2 md:px-72 bg-gray-100 bg-[url('{{ asset('assets/images/bgs/bg-2.jpg') }}')] bg-cover">
+    <div class="py-10 px-2 md:px-20 lg:px-72 bg-gray-100 bg-[url('{{ asset('assets/images/bgs/bg-2.jpg') }}')] bg-cover">
         <div class="text-3xl py-1">Our Products</div>
         <div class="w-20 h-1 bg-orange-500 text-transparent">_</div>
         <div class="py-5">
@@ -21,10 +21,14 @@
             </div>
             <div id="default-tab-content">
                 <div class="hidden p-4 rounded-lg" id="construction" role="tabpanel" aria-labelledby="construction-tab">
-                    @livewire('pages.public.home.components.product.includes.construction')
+                    @livewire('pages.public.home.components.product.includes.construction', [
+                        'page'=>'summary'
+                    ])
                 </div>
                 <div class="hidden p-4 rounded-lg" id="ict" role="tabpanel" aria-labelledby="ict-tab">
-                    @livewire('pages.public.home.components.product.includes.ict')
+                    @livewire('pages.public.home.components.product.includes.ict', [
+                        'page'=>'summary'
+                    ])
                 </div>
             </div>
         </div>

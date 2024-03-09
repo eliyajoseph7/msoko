@@ -4,7 +4,7 @@
     ])
 
     <div
-        class="px-4 md:px-72 py-10 bg-gray-300 bg-[url('{{ asset('assets/images/bgs/bg-2.jpg') }}')] bg-cover bg-blend-overlay">
+        class="px-4 md:px-20 lg:px-72 py-10 bg-gray-300 bg-[url('{{ asset('assets/images/bgs/bg-2.jpg') }}')] bg-cover bg-blend-overlay">
         <div class="">
             At M-SOKO Company Ltd, we specialize in the supply, sale, and maintenance of ICT (Information and
             Communication Technology) and construction materials. With over 5 years of experience in the industry, we
