@@ -5,8 +5,8 @@
     <div>
         <div
             class="py-10 px-2 md:px-20 lg:px-72 bg-gray-200 bg-[url('{{ asset('assets/images/bgs/bg-2.jpg') }}')] bg-cover bg-blend-overlay">
-            <div class="text-3xl py-1">Our Products</div>
-            <div class="w-20 h-1 bg-orange-500 text-transparent">_</div>
+            {{-- <div class="text-3xl py-1">Our Products</div> --}}
+            {{-- <div class="w-20 h-1 bg-orange-500 text-transparent">_</div> --}}
             <div class="py-5">
                 <div class="md:flex">
                     <ul class="flex-column space-y space-y-4 divide-y-2 divide-slate-50 text-sm font-medium text-gray-500 dark:text-gray-400 md:px-2 py-2 mb-4 md:mb-0 bg-white/90"
