@@ -34,23 +34,30 @@
 <body class="">
 
     @include('livewire.layout.public.navbar')
-<div class="min-h-[60vh]">
-    {{ $slot }}
-</div>
+    <div class="min-h-[60vh]">
+        {{ $slot }}
+    </div>
     <!-- footer -->
     <footer class="bg-[#093B6D] min-h-[40vh] px-4 md:px-20 lg:px-72">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-10 space">
             <div class="">
                 <img src="{{ asset('assets/images/logo.png') }}" class="max-h-[100px]">
                 <div class="flex space-x-1 px-8 py-2.5">
-                    <i
-                        class="fa-brands fa-facebook text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
-                    <i
-                        class="fa-brands fa-instagram text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
-                    <i
-                        class="fa-brands fa-whatsapp text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
-                    <i
-                        class="fa-brands fa-tiktok text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
+                    <a href="https://www.facebook.com/profile.php?id=61557235508237" target="_blank"
+                        rel="noopener noreferrer">
+                        <i
+                            class="fa-brands fa-facebook text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
+                    </a>
+                    <a href="https://www.instagram.com/msoko_official" target="_blank" rel="noopener noreferrer">
+                        <i
+                            class="fa-brands fa-instagram text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
+                    </a>
+                    <a href="https://wa.me/255717101860" target="_blank" rel="noopener noreferrer">
+                        <i
+                            class="fa-brands fa-whatsapp text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i>
+                    </a>
+                    {{-- <i
+                        class="fa-brands fa-tiktok text-3xl text-gray-200 hover:text-orange-500 cursor-pointer hover:shadow-xl px-2 py-1 rounded-lg border border-orange-300"></i> --}}
                 </div>
             </div>
             <div class="px-8">
@@ -58,11 +65,16 @@
                 <div class="w-28 h-1 bg-orange-500 text-transparent">_</div>
                 <div class="flex space-x-1 py-2.5">
                     <ul>
-                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ route('about') }}" class="px-2.5 text-gray-300 hover:text-orange-500">About Us</a></li>
-                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ asset('assets/pdf/m-soko_profile.pdf') }}" target="_blank"
-                            rel="noopener noreferrer" class="px-2.5 text-gray-300 hover:text-orange-500">Company Profile</a></li>
-                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ route('products') }}" class="px-2.5 text-gray-300 hover:text-orange-500">Products</a></li>
-                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ route('services') }}" class="px-2.5 text-gray-300 hover:text-orange-500">Our Services</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ route('about') }}"
+                                class="px-2.5 text-gray-300 hover:text-orange-500">About Us</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a
+                                href="{{ asset('assets/pdf/m-soko_profile.pdf') }}" target="_blank"
+                                rel="noopener noreferrer" class="px-2.5 text-gray-300 hover:text-orange-500">Company
+                                Profile</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ route('products') }}"
+                                class="px-2.5 text-gray-300 hover:text-orange-500">Products</a></li>
+                        <li><i class="fa-solid fa-angle-right text-orange-500"></i><a href="{{ route('services') }}"
+                                class="px-2.5 text-gray-300 hover:text-orange-500">Our Services</a></li>
                     </ul>
                 </div>
             </div>
@@ -71,9 +83,15 @@
                 <div class="w-[5.5rem] h-1 bg-orange-500 text-transparent">_</div>
                 <div class="flex space-x-1 py-2.5">
                     <ul>
-                        <li><i class="fa-solid fa-phone text-orange-500 py-2"></i><a href="tel:255717101860" target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">+255 717 101 860</a></li>
-                        <li><i class="fa-solid fa-phone text-orange-500 py-2"></i><a href="tel:762179139" target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">+255 762 179 139</a></li>
-                        <li><i class="fa-solid fa-envelope text-orange-500 py-2"></i><a href="mailto:info@m-soko.co.tz" target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">info@m-soko.co.tz</a></li>
+                        <li><i class="fa-solid fa-phone text-orange-500 py-2"></i><a href="tel:255717101860"
+                                target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">+255 717 101 860</a>
+                        </li>
+                        <li><i class="fa-solid fa-phone text-orange-500 py-2"></i><a href="tel:762179139"
+                                target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">+255 762 179 139</a>
+                        </li>
+                        <li><i class="fa-solid fa-envelope text-orange-500 py-2"></i><a href="mailto:info@m-soko.co.tz"
+                                target="_blank" class="px-2.5 text-gray-300 hover:text-orange-500">info@m-soko.co.tz</a>
+                        </li>
                     </ul>
                 </div>
             </div>
